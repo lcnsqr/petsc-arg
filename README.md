@@ -69,7 +69,7 @@ PETSc relies on MPI to setup how many processes will be launched in parallel, gi
 - GPU only parallel execution.
 - CPU and GPU parallel execution.
 
-The combination of CPU and GPU may not improve the execution time, as the combination of both may result in an increase of memory copy operations between devices. Another important factor affecting the amount of copy operations is the size of the problem, which can result in a non-linear cost/benefit balance between CPU and GPU as the number of elements in the matrix increase.
+The combination of CPU and GPU may not improve the execution time, as the combination of both may result in an increase of memory copy operations between devices. Another important factor affecting the amount of copy operations is the size or the resolution of the problem, which may result in a non-linear cost/benefit balance between CPU and GPU as the number of elements in the matrix increase.
 
 ### Resolution Parameter
 

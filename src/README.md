@@ -26,8 +26,7 @@ In order to perform the GPU tests, the CUDA toolkit must be available.
 - [CUDA Toolkit general installation 
 instructions](https://developer.nvidia.com/cuda-downloads).
 - [Instructions on how to create CUDA enabled 
-containers](https://github.com/lcnsqr/petsc-arg/wiki/CUDA-enabled-Linux-Containe
-rs).
+containers](https://github.com/lcnsqr/petsc-arg/wiki/CUDA-enabled-Linux-Containers).
 
 ## PETSc
 

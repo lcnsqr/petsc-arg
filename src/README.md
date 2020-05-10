@@ -75,8 +75,7 @@ Running `make all` will build both test programs.
 
 Tests are implemented using *make* targets. For example:
 
-    # Launch 8 processes, one per CPU, to find the solution for a 1000x1000 
-surface mesh.
+    # Launch 8 processes, one per CPU, to find the solution for a 1000x1000 surface mesh.
     `make core NP=8 RES=1000`
     
     # Launch 8 threads, to find the solution for a 1000x1000 surface mesh.

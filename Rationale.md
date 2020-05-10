@@ -33,9 +33,9 @@ separate  device  that operates  as  a  co-processor  to  the host  running  the
 program. Originally, PETSc supported only distributed and SMP architectures, but
 current versions also support GPU programming [5].
 
-The abstraction layer provided by PETSc enables writing highly efficient generic
-parallel code  which is  portable to  any of these  three categories.  The PETSc
-toolkit is organized as follows:
+The abstraction layer provided by PETSc enables the writing of highly efficient 
+generic parallel code  which is  portable to  any of these  three categories. 
+The PETSc toolkit is organized as follows:
 
 ![PETSc diagram](pictures/petsc-diagram.svg)
 
@@ -80,7 +80,7 @@ All the numerical  methods to solve PDEs perform  problem domain discretization,
 generating a mesh of points.  The greater the resolution of the mesh, the better
 will be the approximate solution. Therefore, the same problem can be dynamically
 configured to  provide better approximations,  at the expense of  increasing the
-memory and processor(s) usage.
+memory and processor(s) loads.
 
 A higher resolution  of the mesh, although not affecting  the formulation of the
 problem,  can  affect the  performance  on  each architecture  differently.  For

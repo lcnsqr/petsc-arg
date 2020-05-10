@@ -87,4 +87,4 @@ surface mesh.
 
 # Parameters
 
-The (possible incomplete) list of parameters can be found in Parameters.md
+The list of parameters can be found in [Parameters.md](../Parameters.md).

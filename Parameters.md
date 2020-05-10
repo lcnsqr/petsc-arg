@@ -1,3 +1,9 @@
+# PETSc Search Space Parameters
+
+PETSc provides a  simple mechanism to customize its data  structures and methods
+at  runtime,  called  *options  database*. The following table lists the options
+relevant for the purpose of tuning the execution of a PDE solver.
+
 <table>
 <thead>
 <tr>

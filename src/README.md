@@ -38,7 +38,7 @@ incompatibilities with the build provided by the distribution.
 
 The many build options are detailed in the [PETSc installation 
 instructions](https://www.mcs.anl.gov/petsc/documentation/installation.html). 
-To the impatient, the following configuration settings enough to run the test 
+To the impatient, the following configuration settings are enough to run the test 
 programs:
 
     ./configure \

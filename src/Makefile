@@ -10,7 +10,7 @@ MAT_SOLVER_TYPE = cusparse
 all: solver solver_dmda
 
 solver: solver.c
-	${CC} ${CC_FLAGS} ${PETSC_CC_INCLUDES} $^ ${SING_DIR} ${CC_LINKER_SLFLAG}${PETSC_DIR}/${PETSC_ARCH}/lib ${PETSC_WITH_EXTERNAL_LIB} -o $@
+	${CC} ${CC_FLAGS} ${PETSC_CC_INCLUDES} $^ ${CC_LINKER_SLFLAG}${PETSC_DIR}/${PETSC_ARCH}/lib ${PETSC_WITH_EXTERNAL_LIB} -o $@
 
 solver_dmda: solver_dmda.c
 	${CC} ${CC_FLAGS} ${PETSC_CC_INCLUDES} $^ ${CC_LINKER_SLFLAG}${PETSC_DIR}/${PETSC_ARCH}/lib ${PETSC_WITH_EXTERNAL_LIB} -o $@

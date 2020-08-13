@@ -1,10 +1,11 @@
 using ExperimentalDesign, StatsModels, GLM, DataFrames, Distributions, Random, StatsPlots, CSV
 
-cmd_prefix = ["singularity", "exec", "--nv", "../container/petsc-gpu.sif", "make", "-s", "-C", "../src"]
+#cmd_prefix = ["singularity", "exec", "--nv", "../container/petsc-gpu.sif", "make", "-s", "-C", "../src"]
+cmd_prefix = ["make", "-s", "-C", "../src"]
 dev = "core"
-np = 4
-res = 100
-repetitions = 1
+np = 20
+res = 1000
+repetitions = 15
 
 # Response function
 function y(x)

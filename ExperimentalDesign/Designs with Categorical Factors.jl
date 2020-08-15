@@ -2,8 +2,8 @@ using ExperimentalDesign, StatsModels, GLM, DataFrames, Distributions, Random, S
 
 #cmd_prefix = ["singularity", "exec", "--nv", "../container/petsc-gpu.sif", "make", "-s", "-C", "../src"]
 cmd_prefix = ["make", "-s", "-C", "../src"]
-dev = "core"
-np = 20
+dev = "cuda"
+np = 1
 res = 1000
 repetitions = 15
 
@@ -14,6 +14,7 @@ function y(x)
       push!(parameters, rstrip(string(uppercase(string(keys(x)[i])), "=", x[i], " ")))
   end
   
+  println(parameters)
   cmd = `$cmd_prefix $[dev, "NP=$np", "RES=$res"] $parameters`
 
   # Run external experiment command
@@ -23,7 +24,7 @@ end
 
 factorial_design = FullFactorial((
   ksp_type = ["cg", "gmres", "fcg", "tcqmr", "cgs", "bcgs", "tfqmr", "cr", "gcr"],
-  pc_type = ["jacobi", "sor", "bjacobi", "mg"]), @formula(y ~ ksp_type + pc_type))
+  pc_type = ["jacobi", "sor", "mg"]), @formula(y ~ ksp_type + pc_type))
 
 factorial_design.matrix[!, :response] = y.(eachrow(factorial_design.matrix))
 

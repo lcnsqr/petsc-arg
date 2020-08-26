@@ -4,8 +4,8 @@ using ExperimentalDesign, StatsModels, GLM, DataFrames, Distributions, Random, S
 cmd_prefix = ["make", "-s", "-C", "../src"]
 dev = "core"
 np = 20
-res = 100
-repetitions = 3
+res = 1000
+repetitions = 15
 
 # Response function
 function y(x)

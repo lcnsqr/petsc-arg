@@ -4,8 +4,8 @@ using ExperimentalDesign, StatsModels, GLM, DataFrames, Distributions, Random, S
 cmd_prefix = ["make", "-s", "-C", "../src"]
 dev = "cuda"
 np = 1
-res = 100
-repetitions = 3
+res = 1000
+repetitions = 15
 
 # Response function
 function y(x)
@@ -21,11 +21,11 @@ function y(x)
   output = split(chomp(read(cmd, String)))
 
   # Parse output fields
-  main_stage = parse(Float64, output[0])
-  min1 = parse(Float64, output[1])
-  min5 = parse(Float64, output[2])
-  min15 = parse(Float64, output[3])
-  proc = output[4]
+  main_stage = parse(Float64, output[1])
+  min1 = parse(Float64, output[2])
+  min5 = parse(Float64, output[3])
+  min15 = parse(Float64, output[4])
+  proc = output[5]
 
   # Return tuple with the five parsed values
   return main_stage, min1, min5, min15, proc

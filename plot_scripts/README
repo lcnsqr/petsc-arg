@@ -1,0 +1,13 @@
+Heatmap table from experiments results.
+
+colors: Generate color scale for the heatmap:
+
+  ./colors > colors.txt
+
+averages.sh: Compute mean, CI.
+
+  ./averages.sh > averages.csv
+
+heatmaps.sh: Generate the heatmap table.
+
+html.sh: Generate the basic HTML template.

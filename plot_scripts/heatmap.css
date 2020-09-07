@@ -27,11 +27,25 @@ table {
   margin-right: auto;
 }
 
+table tr {
+  display: flex;
+}
+
 table tr td {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin:4px;
   padding: 8px 12px;
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 2px #000;
+  border-radius: 5%;
+}
+
+table tr td p {
+  width: 100%;
 }
 
 table tr td:first-child {
@@ -41,6 +55,11 @@ table tr td:first-child {
   text-shadow: 0 0 0 #000;
 }
 
+table tr td:first-child p {
+  width: 100%;
+  text-align: right;
+}
+
 table tr:last-child td {
   background-color: #fff;
   border-width: 0;
@@ -48,8 +67,17 @@ table tr:last-child td {
   text-shadow: 0 0 0 #000;
 }
 
+table tr:last-child td {
+  height: 1em;
+}
+
 table tr:last-child td:first-child {
   color: #666;
+}
+
+table tr:last-child td:not(:first-child) p {
+  width: 100%;
+  text-align: center;
 }
 
 table tr td .ci {

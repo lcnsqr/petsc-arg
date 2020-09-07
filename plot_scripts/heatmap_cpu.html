@@ -9,69 +9,69 @@
 <body>
 
 <h1>CPU: Tempo de execução em segundos</h1>
-<p>Melhor: <span class="min">4.49</span></p>
-<p>Pior: <span class="max">133.02</span></p>
+<p>Melhor: <span class="min">8.16</span></p>
+<p>Pior: <span class="max">275.59</span></p>
 <table>
-<tr><td>cg</td>
-<!-- cg.bjacobi --><td style="background-color: #0000FFcc"><p>4.49<br><span class="ci">IC: 0.06</span></p></td>
-<!-- cg.jacobi --><td style="background-color: #000AF4cc"><p>7.32<br><span class="ci">IC: 0.07</span></p></td>
-<!-- cg.sor --><td style="background-color: #0004FAcc"><p>5.76<br><span class="ci">IC: 0.07</span></p></td>
-<!-- cg.mg --><td style="background-color: #0007F7cc"><p>6.60<br><span class="ci">IC: 0.10</span></p></td>
+<tr><td><p>cg</p></td>
+<!-- cg.bjacobi --><td style="background-color: #0002FCcc"><p>9.92<br><span class="ci">IC: 5.50</span></p></td>
+<!-- cg.jacobi --><td style="background-color: #0018E6cc"><p>21.32<br><span class="ci">IC: 14.24</span></p></td>
+<!-- cg.sor --><td style="background-color: #000AF4cc"><p>13.79<br><span class="ci">IC: 6.79</span></p></td>
+<!-- cg.mg --><td style="background-color: #0004FAcc"><p>10.70<br><span class="ci">IC: 4.12</span></p></td>
 </tr>
-<tr><td>gmres</td>
-<!-- gmres.bjacobi --><td style="background-color: #17E700cc"><p>74.87<br><span class="ci">IC: 0.36</span></p></td>
-<!-- gmres.jacobi --><td style="background-color: #44BA00cc"><p>86.28<br><span class="ci">IC: 0.19</span></p></td>
-<!-- gmres.sor --><td style="background-color: #DD2100cc"><p>124.85<br><span class="ci">IC: 0.26</span></p></td>
-<!-- gmres.mg --><td style="background-color: #00F509cc"><p>66.36<br><span class="ci">IC: 0.16</span></p></td>
+<tr><td><p>gmres</p></td>
+<!-- gmres.bjacobi --><td style="background-color: #00BC42cc"><p>107.20<br><span class="ci">IC: 32.65</span></p></td>
+<!-- gmres.jacobi --><td style="background-color: #00ED11cc"><p>132.95<br><span class="ci">IC: 47.40</span></p></td>
+<!-- gmres.sor --><td style="background-color: #609D00cc"><p>193.24<br><span class="ci">IC: 58.06</span></p></td>
+<!-- gmres.mg --><td style="background-color: #009865cc"><p>88.67<br><span class="ci">IC: 22.24</span></p></td>
 </tr>
-<tr><td>fcg</td>
-<!-- fcg.bjacobi --><td style="background-color: #000DF1cc"><p>8.05<br><span class="ci">IC: 0.08</span></p></td>
-<!-- fcg.jacobi --><td style="background-color: #0031CDcc"><p>17.05<br><span class="ci">IC: 0.27</span></p></td>
-<!-- fcg.sor --><td style="background-color: #0014EAcc"><p>9.68<br><span class="ci">IC: 0.10</span></p></td>
-<!-- fcg.mg --><td style="background-color: #0010EEcc"><p>8.79<br><span class="ci">IC: 0.11</span></p></td>
+<tr><td><p>fcg</p></td>
+<!-- fcg.bjacobi --><td style="background-color: #000BF3cc"><p>14.57<br><span class="ci">IC: 6.58</span></p></td>
+<!-- fcg.jacobi --><td style="background-color: #002FCFcc"><p>33.42<br><span class="ci">IC: 16.24</span></p></td>
+<!-- fcg.sor --><td style="background-color: #000FEFcc"><p>16.60<br><span class="ci">IC: 6.96</span></p></td>
+<!-- fcg.mg --><td style="background-color: #0009F5cc"><p>13.40<br><span class="ci">IC: 4.60</span></p></td>
 </tr>
-<tr><td>tcqmr</td>
-<!-- tcqmr.bjacobi --><td style="background-color: #0043BAcc"><p>21.71<br><span class="ci">IC: 0.17</span></p></td>
-<!-- tcqmr.jacobi --><td style="background-color: #FE0000cc"><p>133.02<br><span class="ci">IC: 0.31</span></p></td>
-<!-- tcqmr.sor --><td style="background-color: #50AE00cc"><p>89.19<br><span class="ci">IC: 0.27</span></p></td>
-<!-- tcqmr.mg --><td style="background-color: #004FAEcc"><p>24.76<br><span class="ci">IC: 0.18</span></p></td>
+<tr><td><p>tcqmr</p></td>
+<!-- tcqmr.bjacobi --><td style="background-color: #0038C6cc"><p>38.17<br><span class="ci">IC: 16.66</span></p></td>
+<!-- tcqmr.jacobi --><td style="background-color: #FE0000cc"><p>275.59<br><span class="ci">IC: 129.01</span></p></td>
+<!-- tcqmr.sor --><td style="background-color: #03FB00cc"><p>144.33<br><span class="ci">IC: 56.12</span></p></td>
+<!-- tcqmr.mg --><td style="background-color: #0034CAcc"><p>35.98<br><span class="ci">IC: 11.28</span></p></td>
 </tr>
-<tr><td>cgs</td>
-<!-- cgs.bjacobi --><td style="background-color: #0009F5cc"><p>7.02<br><span class="ci">IC: 0.09</span></p></td>
-<!-- cgs.jacobi --><td style="background-color: #0024DAcc"><p>13.71<br><span class="ci">IC: 0.08</span></p></td>
-<!-- cgs.sor --><td style="background-color: #0013EBcc"><p>9.53<br><span class="ci">IC: 0.06</span></p></td>
-<!-- cgs.mg --><td style="background-color: #0014EAcc"><p>9.78<br><span class="ci">IC: 0.12</span></p></td>
+<tr><td><p>cgs</p></td>
+<!-- cgs.bjacobi --><td style="background-color: #0006F8cc"><p>12.04<br><span class="ci">IC: 5.04</span></p></td>
+<!-- cgs.jacobi --><td style="background-color: #002CD2cc"><p>31.86<br><span class="ci">IC: 15.36</span></p></td>
+<!-- cgs.sor --><td style="background-color: #000DF1cc"><p>15.52<br><span class="ci">IC: 6.02</span></p></td>
+<!-- cgs.mg --><td style="background-color: #000AF4cc"><p>14.00<br><span class="ci">IC: 4.24</span></p></td>
 </tr>
-<tr><td>bcgs</td>
-<!-- bcgs.bjacobi --><td style="background-color: #0007F7cc"><p>6.44<br><span class="ci">IC: 0.07</span></p></td>
-<!-- bcgs.jacobi --><td style="background-color: #001EE0cc"><p>12.30<br><span class="ci">IC: 0.20</span></p></td>
-<!-- bcgs.sor --><td style="background-color: #000FEFcc"><p>8.59<br><span class="ci">IC: 0.10</span></p></td>
-<!-- bcgs.mg --><td style="background-color: #0016E8cc"><p>10.30<br><span class="ci">IC: 0.16</span></p></td>
+<tr><td><p>bcgs</p></td>
+<!-- bcgs.bjacobi --><td style="background-color: #0005F9cc"><p>11.43<br><span class="ci">IC: 5.01</span></p></td>
+<!-- bcgs.jacobi --><td style="background-color: #0028D6cc"><p>29.66<br><span class="ci">IC: 14.67</span></p></td>
+<!-- bcgs.sor --><td style="background-color: #000CF2cc"><p>14.71<br><span class="ci">IC: 6.14</span></p></td>
+<!-- bcgs.mg --><td style="background-color: #000DF1cc"><p>15.25<br><span class="ci">IC: 4.90</span></p></td>
 </tr>
-<tr><td>tfqmr</td>
-<!-- tfqmr.bjacobi --><td style="background-color: #000AF4cc"><p>7.25<br><span class="ci">IC: 0.04</span></p></td>
-<!-- tfqmr.jacobi --><td style="background-color: #0029D5cc"><p>14.95<br><span class="ci">IC: 0.07</span></p></td>
-<!-- tfqmr.sor --><td style="background-color: #0012ECcc"><p>9.34<br><span class="ci">IC: 0.06</span></p></td>
-<!-- tfqmr.mg --><td style="background-color: #0014EAcc"><p>9.79<br><span class="ci">IC: 0.05</span></p></td>
+<tr><td><p>tfqmr</p></td>
+<!-- tfqmr.bjacobi --><td style="background-color: #0007F7cc"><p>12.40<br><span class="ci">IC: 5.21</span></p></td>
+<!-- tfqmr.jacobi --><td style="background-color: #002FCFcc"><p>33.40<br><span class="ci">IC: 15.56</span></p></td>
+<!-- tfqmr.sor --><td style="background-color: #000CF2cc"><p>15.03<br><span class="ci">IC: 5.74</span></p></td>
+<!-- tfqmr.mg --><td style="background-color: #000BF3cc"><p>14.22<br><span class="ci">IC: 4.45</span></p></td>
 </tr>
-<tr><td>cr</td>
-<!-- cr.bjacobi --><td style="background-color: #FE0000cc"><p>4.26<br><span class="ci">IC: 0.01</span></p></td>
-<!-- cr.jacobi --><td style="background-color: #000CF2cc"><p>7.73<br><span class="ci">IC: 0.09</span></p></td>
-<!-- cr.sor --><td style="background-color: #0005F9cc"><p>5.93<br><span class="ci">IC: 0.09</span></p></td>
-<!-- cr.mg --><td style="background-color: #0008F6cc"><p>6.66<br><span class="ci">IC: 0.10</span></p></td>
+<tr><td><p>cr</p></td>
+<!-- cr.bjacobi --><td style="background-color: #0000FFcc"><p>8.16<br><span class="ci">IC: 3.92</span></p></td>
+<!-- cr.jacobi --><td style="background-color: #0017E7cc"><p>20.73<br><span class="ci">IC: 11.01</span></p></td>
+<!-- cr.sor --><td style="background-color: #0003FBcc"><p>10.47<br><span class="ci">IC: 4.56</span></p></td>
+<!-- cr.mg --><td style="background-color: #0003FBcc"><p>10.00<br><span class="ci">IC: 3.32</span></p></td>
 </tr>
-<tr><td>gcr</td>
-<!-- gcr.bjacobi --><td style="background-color: #877700cc"><p>103.03<br><span class="ci">IC: 0.28</span></p></td>
-<!-- gcr.jacobi --><td style="background-color: #BD4000cc"><p>116.77<br><span class="ci">IC: 0.19</span></p></td>
-<!-- gcr.sor --><td style="background-color: #8D7100cc"><p>104.59<br><span class="ci">IC: 0.23</span></p></td>
-<!-- gcr.mg --><td style="background-color: #23DB00cc"><p>77.92<br><span class="ci">IC: 0.20</span></p></td>
+<tr><td><p>gcr</p></td>
+<!-- gcr.bjacobi --><td style="background-color: #10EE00cc"><p>151.01<br><span class="ci">IC: 48.58</span></p></td>
+<!-- gcr.jacobi --><td style="background-color: #659800cc"><p>195.72<br><span class="ci">IC: 66.79</span></p></td>
+<!-- gcr.sor --><td style="background-color: #0FEF00cc"><p>150.32<br><span class="ci">IC: 46.29</span></p></td>
+<!-- gcr.mg --><td style="background-color: #00BA43cc"><p>106.31<br><span class="ci">IC: 28.76</span></p></td>
 </tr>
 <tr>
 <td><p>solver/pc</p></td>
 <td><p>bjacobi</p></td>
 <td><p>jacobi</p></td>
 <td><p>sor</p></td>
-<td><p>gcr</p></td>
+<td><p>mg</p></td>
 </tr>
 </table>
 

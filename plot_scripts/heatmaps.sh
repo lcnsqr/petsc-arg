@@ -3,10 +3,16 @@
 LC_ALL=C
 
 # Load computed averages
-CSV=averages.csv
-readarray -t AVERAGES < $CSV
 
-TARGET=cpu
+# CPU
+#CSV=averages_cpu_20200826.csv
+#TARGET=cpu
+
+# GPU
+CSV=averages_gpu_20200828.csv
+TARGET=gpu
+
+readarray -t AVERAGES < $CSV
 
 # Load colors
 readarray -t COLORS < colors.txt

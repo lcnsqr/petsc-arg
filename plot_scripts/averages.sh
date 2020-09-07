@@ -2,16 +2,16 @@
 
 LC_ALL=C
 
-CSV=../ExperimentalDesign/cpu_20200826.csv
-#CSV=../ExperimentalDesign/gpu_20200828.csv
+#CSV=../ExperimentalDesign/cpu_20200826.csv
+CSV=../ExperimentalDesign/gpu_20200828.csv
 
 ksp_type=("cg" "gmres" "fcg" "tcqmr" "cgs" "bcgs" "tfqmr" "cr" "gcr")
 
 # CPU
-pc_type=("bjacobi" "jacobi" "sor" "mg")
+#pc_type=("bjacobi" "jacobi" "sor" "mg")
 
 # GPU
-#pc_type=("icc" "jacobi" "sor" "mg")
+pc_type=("icc" "jacobi" "sor" "mg")
 
 # Field to compute
 # 3: Main stage execution time
@@ -21,7 +21,7 @@ pc_type=("bjacobi" "jacobi" "sor" "mg")
 FIELD=3
 
 # How many bad values to discard
-DISCARD=5
+DISCARD=0
 
 echo "ksp_type,pc_type,mean,sd,ci"
 

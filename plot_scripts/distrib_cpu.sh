@@ -1,27 +1,34 @@
 #! /bin/bash
 
-# Distribuição dos experimentos por duração
+# Experiment distribution by elapsed time
 
 LC_ALL=C
 
-CSV=../ExperimentalDesign/cpu_20200826.csv
-#CSV=../ExperimentalDesign/gpu_20200828.csv
+if [ $# -lt 1 ]
+then
+  echo -e "Argument missing. Usage:\n\n$0 path/to/CSV\n"
+  exit
+fi
+  
+CSV=$1
 
 ksp_type=("cg" "gmres" "fcg" "tcqmr" "cgs" "bcgs" "tfqmr" "cr" "gcr")
 
 # CPU
 pc_type=("bjacobi" "jacobi" "sor" "mg")
 
-# GPU
-#pc_type=("icc" "jacobi" "sor" "mg")
-
 # CPU intervals
 COL=60
 SLOTS=(`seq 60 $COL 960`)
 
-# GPU intervals
-#COL=120
-#SLOTS=(`seq 120 $COL 2280`)
+if [ $0 == "./distrib_gpu.sh" ]
+then
+  # GPU
+  pc_type=("icc" "jacobi" "sor" "mg")
+  # GPU intervals
+  COL=120
+  SLOTS=(`seq 120 $COL 2280`)
+fi
 
 # Field to compute
 # 3: Main stage execution time

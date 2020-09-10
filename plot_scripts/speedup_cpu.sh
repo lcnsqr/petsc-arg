@@ -1,16 +1,21 @@
 #! /bin/bash
 
-# CPU
-#CSV=averages_cpu_20200826.csv
-
-# GPU
-CSV=averages_gpu_20200828.csv
+if [ $# -lt 1 ]
+then
+  echo -e "Argument missing. Usage:\n\n$0 path/to/CSV\n"
+  exit
+fi
+  
+CSV=$1
 
 # Default option for CPU
-#DEF=gmres,bjacobi
+DEF=gmres,bjacobi
 
-# Default option for GPU
-DEF=gmres,icc
+if [ $0 == "./speedup_gpu.sh" ]
+then
+  # Default option for GPU
+  DEF=gmres,icc
+fi
 
 # Baseline
 

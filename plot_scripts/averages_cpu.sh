@@ -2,16 +2,24 @@
 
 LC_ALL=C
 
-#CSV=../ExperimentalDesign/cpu_20200826.csv
-CSV=../ExperimentalDesign/gpu_20200828.csv
+if [ $# -lt 1 ]
+then
+  echo -e "Argument missing. Usage:\n\n$0 path/to/CSV\n"
+  exit
+fi
+  
+CSV=$1
 
 ksp_type=("cg" "gmres" "fcg" "tcqmr" "cgs" "bcgs" "tfqmr" "cr" "gcr")
 
 # CPU
-#pc_type=("bjacobi" "jacobi" "sor" "mg")
+pc_type=("bjacobi" "jacobi" "sor" "mg")
 
-# GPU
-pc_type=("icc" "jacobi" "sor" "mg")
+if [ $0 == "./averages_gpu.sh" ]
+then
+  # GPU
+  pc_type=("icc" "jacobi" "sor" "mg")
+fi
 
 # Field to compute
 # 3: Main stage execution time

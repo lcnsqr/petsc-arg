@@ -3,14 +3,22 @@
 LC_ALL=C
 
 # Load computed averages
+if [ $# -lt 1 ]
+then
+  echo -e "Argument missing. Usage:\n\n$0 path/to/CSV\n"
+  exit
+fi
+  
+CSV=$1
 
 # CPU
-#CSV=averages_cpu_20200826.csv
-#TARGET=cpu
+TARGET=cpu
 
-# GPU
-CSV=averages_gpu_20200828.csv
-TARGET=gpu
+if [ $0 == "./heatmap_gpu.sh" ]
+then
+  # GPU
+  TARGET=gpu
+fi
 
 readarray -t AVERAGES < $CSV
 

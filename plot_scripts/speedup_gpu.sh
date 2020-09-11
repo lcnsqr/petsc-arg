@@ -1,1 +1,0 @@
-speedup_cpu.sh

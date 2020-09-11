@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>PETSC ARG Experiments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="speedup.css">
+</head>
+<body>
+
+<h1>CPU: Speedup</h1>
+<p>Melhor: <span class="max">#max#</span></p>
+<p>Pior: <span class="min">#min#</span></p>
+<table>
+<tr>
+<td><p>solver/pc</p></td>
+<td><p>bjacobi</p></td>
+<td><p>jacobi</p></td>
+<td><p>sor</p></td>
+<td><p>mg</p></td>
+</tr>
+<tr><td><p>cg</p></td>
+<!-- cg.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- cg.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- cg.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- cg.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+</tr>
+<tr><td><p>gmres</p></td>
+<!-- gmres.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- gmres.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- gmres.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- gmres.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+</tr>
+<tr><td><p>fcg</p></td>
+<!-- fcg.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- fcg.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- fcg.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- fcg.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+</tr>
+<tr><td><p>tcqmr</p></td>
+<!-- tcqmr.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- tcqmr.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- tcqmr.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- tcqmr.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+</tr>
+<tr><td><p>cgs</p></td>
+<!-- cgs.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- cgs.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- cgs.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- cgs.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+</tr>
+<tr><td><p>bcgs</p></td>
+<!-- bcgs.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- bcgs.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- bcgs.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- bcgs.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+</tr>
+<tr><td><p>tfqmr</p></td>
+<!-- tfqmr.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- tfqmr.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- tfqmr.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- tfqmr.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+</tr>
+<tr><td><p>cr</p></td>
+<!-- cr.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- cr.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- cr.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- cr.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+</tr>
+<tr><td><p>gcr</p></td>
+<!-- gcr.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- gcr.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- gcr.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+<!-- gcr.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span>
+</tr>
+</table>
+
+</body>
+</html>

@@ -4,7 +4,7 @@ TMP=`mktemp`
 
 LOG_DIR=cpu
 
-if [ $0 == 'parse_gpu.sh' ]
+if [ $0 == './parse_gpu.sh' ]
 then
   LOG_DIR=gpu
 fi

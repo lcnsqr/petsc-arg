@@ -2,7 +2,7 @@
 
 TMP=`mktemp`
 
-LOG_DIR=cpu
+LOG_DIR=gpu
 
 if [ $0 == 'parse_gpu.sh' ]
 then

@@ -26,10 +26,6 @@ fi
 # 4: Load average in the last minute
 # 5: Load average in the last five minutes
 # 6: Load average in the last fifteen minutes
-FIELD=3
-
-# How many bad values to discard
-DISCARD=0
 
 echo "ksp_type,pc_type,mean,sd,ci"
 
@@ -38,13 +34,13 @@ do
 	for (( i = 0; i < ${#pc_type[*]}; i++ ))
   do
     # Sample size
-    N=`grep "^${ksp_type[$j]},${pc_type[$i]}" < "$CSV" | sort -g -k $FIELD | head -n -$DISCARD | wc -l`
+    N=`grep "^${ksp_type[$j]},${pc_type[$i]}" < "$CSV" | wc -l`
 
     # Mean
-    MEAN=`grep "^${ksp_type[$j]},${pc_type[$i]}" < "$CSV" | tr ',' ' ' | sort -g -k $FIELD | head -n -$DISCARD | awk -v n=$N '{sum+=$3} END {printf "%f", sum/n}'`
+    MEAN=`grep "^${ksp_type[$j]},${pc_type[$i]}" < "$CSV"  | awk -F, -v n=$N '{sum+=$3} END {printf "%f", sum/n}'`
 
     # Variance
-    VARIANCE=`grep "^${ksp_type[$j]},${pc_type[$i]}" < "$CSV" | tr ',' ' ' | sort -g -k $FIELD | head -n -$DISCARD | awk -v n=$N -v mean=$MEAN '{sum+=($3-mean)^2} END {printf "%f", sum/n}'`
+    VARIANCE=`grep "^${ksp_type[$j]},${pc_type[$i]}" < "$CSV" | awk -F, -v n=$N -v mean=$MEAN '{sum+=($3-mean)^2} END {printf "%f", sum/n}'`
 
     # Standard deviation
     SD=`awk '{printf "%f", sqrt($1)}' <<<$VARIANCE`

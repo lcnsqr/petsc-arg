@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>CPU @ #machine#: timings in seconds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="timings.css">
+</head>
+<body>
+
+<h1>CPU @ #machine#: timings in seconds</h1>
+<p>Best solver/pc: <span class="best_parms">#bestparms#</span> (<span class="max">#min#</span>)</p>
+<p>Worst solver/pc: <span class="worst_parms">#worstparms#</span> (<span class="min">#max#</span>)</p>
+<table>
+<tr>
+<td><p>solver/pc</p></td>
+<td><p>bjacobi</p></td>
+<td><p>jacobi</p></td>
+<td><p>sor</p></td>
+<td><p>mg</p></td>
+</tr>
+<tr><td><p>cg</p></td>
+<!-- cg.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- cg.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- cg.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- cg.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+</tr>
+<tr><td><p>gmres</p></td>
+<!-- gmres.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- gmres.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- gmres.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- gmres.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+</tr>
+<tr><td><p>fcg</p></td>
+<!-- fcg.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- fcg.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- fcg.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- fcg.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+</tr>
+<tr><td><p>tcqmr</p></td>
+<!-- tcqmr.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- tcqmr.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- tcqmr.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- tcqmr.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+</tr>
+<tr><td><p>cgs</p></td>
+<!-- cgs.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- cgs.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- cgs.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- cgs.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+</tr>
+<tr><td><p>bcgs</p></td>
+<!-- bcgs.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- bcgs.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- bcgs.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- bcgs.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+</tr>
+<tr><td><p>tfqmr</p></td>
+<!-- tfqmr.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- tfqmr.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- tfqmr.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- tfqmr.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+</tr>
+<tr><td><p>cr</p></td>
+<!-- cr.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- cr.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- cr.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- cr.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+</tr>
+<tr><td><p>gcr</p></td>
+<!-- gcr.bjacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- gcr.jacobi --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- gcr.sor --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+<!-- gcr.mg --><td class="#direction#"><span class="arrow">#arrow#</span><span class="value">#value#</span><span class="ci">#ci#</span></td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -6,10 +6,10 @@ set boxwidth 0.4
 set style fill solid 1.00 
 
 # Set a title and Y label. The X label is obviously months, so we don't set it.
-set title "Distribuição dos experimentos por duração (GPU)" font ",22" tc rgb "#606060"
-set ylabel "Experimentos"
+set title "BrucutuVI: Experiments distribution by time (GPU)" font ",22" tc rgb "#606060"
+set ylabel "Experiments"
 
-set xlabel "Minutos"
+set xlabel "Minutes"
 
 # Rotate X labels and get rid of the small stripes at the top (nomirror)
 set xtics right rotate by 45 offset 0,0

@@ -2,15 +2,15 @@
 <html lang="pt">
 <head>
   <meta charset="utf-8">
-  <title>PETSC ARG Experiments</title>
+  <title>CPU @ SDumount: speed-up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="speedup.css">
 </head>
 <body>
 
-<h1>CPU @ SDumont: Speedup</h1>
-<p>Melhor: <strong>cr/bjacobi</strong>, speedup: <span class="max">13.22</span></p>
-<p>Pior: <strong>gmres/sor</strong>, speedup: <span class="min">0.58</span></p>
+<h1>CPU @ SDumount: speed-up</h1>
+<p>Best solver/pc: <span class="best_parms">cr/bjacobi</span> (<span class="max">13.22</span>)</p>
+<p>Worst solver/pc: <span class="worst_parms">gmres/sor</span> (<span class="min">0.58</span>)</p>
 <table>
 <tr>
 <td><p>solver/pc</p></td>
@@ -20,58 +20,58 @@
 <td><p>mg</p></td>
 </tr>
 <tr><td><p>cg</p></td>
-<!-- cg.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">12.55</span>
-<!-- cg.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.58</span>
-<!-- cg.sor --><td class="up"><span class="arrow">🠝</span><span class="value">10.59</span>
-<!-- cg.mg --><td class="up"><span class="arrow">🠝</span><span class="value">8.95</span>
+<!-- cg.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">12.55</span></td>
+<!-- cg.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.58</span></td>
+<!-- cg.sor --><td class="up"><span class="arrow">🠝</span><span class="value">10.59</span></td>
+<!-- cg.mg --><td class="up"><span class="arrow">🠝</span><span class="value">8.95</span></td>
 </tr>
 <tr><td><p>gmres</p></td>
-<!-- gmres.bjacobi --><td class="same"><span class="arrow">-</span><span class="value">1.00</span>
-<!-- gmres.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.85</span>
-<!-- gmres.sor --><td class="down"><span class="arrow">🠟</span><span class="value">0.58</span>
-<!-- gmres.mg --><td class="up"><span class="arrow">🠝</span><span class="value">1.06</span>
+<!-- gmres.bjacobi --><td class="same"><span class="arrow">⏸</span><span class="value">1.00</span></td>
+<!-- gmres.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.85</span></td>
+<!-- gmres.sor --><td class="down"><span class="arrow">🠟</span><span class="value">0.58</span></td>
+<!-- gmres.mg --><td class="up"><span class="arrow">🠝</span><span class="value">1.06</span></td>
 </tr>
 <tr><td><p>fcg</p></td>
-<!-- fcg.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.17</span>
-<!-- fcg.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">4.27</span>
-<!-- fcg.sor --><td class="up"><span class="arrow">🠝</span><span class="value">6.83</span>
-<!-- fcg.mg --><td class="up"><span class="arrow">🠝</span><span class="value">7.12</span>
+<!-- fcg.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.17</span></td>
+<!-- fcg.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">4.27</span></td>
+<!-- fcg.sor --><td class="up"><span class="arrow">🠝</span><span class="value">6.83</span></td>
+<!-- fcg.mg --><td class="up"><span class="arrow">🠝</span><span class="value">7.12</span></td>
 </tr>
 <tr><td><p>tcqmr</p></td>
-<!-- tcqmr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">1.93</span>
-<!-- tcqmr.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.80</span>
-<!-- tcqmr.sor --><td class="up"><span class="arrow">🠝</span><span class="value">2.68</span>
-<!-- tcqmr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">2.82</span>
+<!-- tcqmr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">1.93</span></td>
+<!-- tcqmr.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.80</span></td>
+<!-- tcqmr.sor --><td class="up"><span class="arrow">🠝</span><span class="value">2.68</span></td>
+<!-- tcqmr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">2.82</span></td>
 </tr>
 <tr><td><p>cgs</p></td>
-<!-- cgs.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.86</span>
-<!-- cgs.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">4.95</span>
-<!-- cgs.sor --><td class="up"><span class="arrow">🠝</span><span class="value">7.15</span>
-<!-- cgs.mg --><td class="up"><span class="arrow">🠝</span><span class="value">6.35</span>
+<!-- cgs.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.86</span></td>
+<!-- cgs.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">4.95</span></td>
+<!-- cgs.sor --><td class="up"><span class="arrow">🠝</span><span class="value">7.15</span></td>
+<!-- cgs.mg --><td class="up"><span class="arrow">🠝</span><span class="value">6.35</span></td>
 </tr>
 <tr><td><p>bcgs</p></td>
-<!-- bcgs.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.92</span>
-<!-- bcgs.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">5.42</span>
-<!-- bcgs.sor --><td class="up"><span class="arrow">🠝</span><span class="value">7.43</span>
-<!-- bcgs.mg --><td class="up"><span class="arrow">🠝</span><span class="value">6.11</span>
+<!-- bcgs.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.92</span></td>
+<!-- bcgs.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">5.42</span></td>
+<!-- bcgs.sor --><td class="up"><span class="arrow">🠝</span><span class="value">7.43</span></td>
+<!-- bcgs.mg --><td class="up"><span class="arrow">🠝</span><span class="value">6.11</span></td>
 </tr>
 <tr><td><p>tfqmr</p></td>
-<!-- tfqmr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.66</span>
-<!-- tfqmr.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">4.64</span>
-<!-- tfqmr.sor --><td class="up"><span class="arrow">🠝</span><span class="value">6.92</span>
-<!-- tfqmr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">6.32</span>
+<!-- tfqmr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.66</span></td>
+<!-- tfqmr.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">4.64</span></td>
+<!-- tfqmr.sor --><td class="up"><span class="arrow">🠝</span><span class="value">6.92</span></td>
+<!-- tfqmr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">6.32</span></td>
 </tr>
 <tr><td><p>cr</p></td>
-<!-- cr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">13.22</span>
-<!-- cr.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.32</span>
-<!-- cr.sor --><td class="up"><span class="arrow">🠝</span><span class="value">10.23</span>
-<!-- cr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">8.86</span>
+<!-- cr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">13.22</span></td>
+<!-- cr.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.32</span></td>
+<!-- cr.sor --><td class="up"><span class="arrow">🠝</span><span class="value">10.23</span></td>
+<!-- cr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">8.86</span></td>
 </tr>
 <tr><td><p>gcr</p></td>
-<!-- gcr.bjacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.70</span>
-<!-- gcr.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.64</span>
-<!-- gcr.sor --><td class="down"><span class="arrow">🠟</span><span class="value">0.67</span>
-<!-- gcr.mg --><td class="down"><span class="arrow">🠟</span><span class="value">0.91</span>
+<!-- gcr.bjacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.70</span></td>
+<!-- gcr.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.64</span></td>
+<!-- gcr.sor --><td class="down"><span class="arrow">🠟</span><span class="value">0.67</span></td>
+<!-- gcr.mg --><td class="down"><span class="arrow">🠟</span><span class="value">0.91</span></td>
 </tr>
 </table>
 

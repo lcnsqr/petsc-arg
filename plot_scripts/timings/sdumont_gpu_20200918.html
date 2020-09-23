@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>GPU @ SDumont: timings in seconds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="timings.css">
+</head>
+<body>
+
+<h1>GPU @ SDumont: timings in seconds</h1>
+<p>Best solver/pc: <span class="best_parms">cr/icc</span> (<span class="max">30.15</span>)</p>
+<p>Worst solver/pc: <span class="worst_parms">gcr/sor</span> (<span class="min">835.58</span>)</p>
+<table>
+<tr>
+<td><p>solver/pc</p></td>
+<td><p>icc</p></td>
+<td><p>jacobi</p></td>
+<td><p>sor</p></td>
+<td><p>mg</p></td>
+</tr>
+<tr><td><p>cg</p></td>
+<!-- cg.icc --><td class="faster"><span class="arrow">🠟</span><span class="value">32.66</span><span class="ci">±0.03</span></td>
+<!-- cg.jacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">41.72</span><span class="ci">±0.08</span></td>
+<!-- cg.sor --><td class="faster"><span class="arrow">🠟</span><span class="value">37.50</span><span class="ci">±0.07</span></td>
+<!-- cg.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">44.36</span><span class="ci">±0.09</span></td>
+</tr>
+<tr><td><p>gmres</p></td>
+<!-- gmres.icc --><td class="same-time"><span class="arrow">⏸</span><span class="value">312.08</span><span class="ci">±0.22</span></td>
+<!-- gmres.jacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">214.60</span><span class="ci">±0.23</span></td>
+<!-- gmres.sor --><td class="slower"><span class="arrow">🠝</span><span class="value">452.47</span><span class="ci">±0.46</span></td>
+<!-- gmres.mg --><td class="slower"><span class="arrow">🠝</span><span class="value">335.02</span><span class="ci">±0.45</span></td>
+</tr>
+<tr><td><p>fcg</p></td>
+<!-- fcg.icc --><td class="faster"><span class="arrow">🠟</span><span class="value">42.45</span><span class="ci">±0.03</span></td>
+<!-- fcg.jacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">70.76</span><span class="ci">±0.11</span></td>
+<!-- fcg.sor --><td class="faster"><span class="arrow">🠟</span><span class="value">48.45</span><span class="ci">±0.04</span></td>
+<!-- fcg.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">50.41</span><span class="ci">±0.08</span></td>
+</tr>
+<tr><td><p>tcqmr</p></td>
+<!-- tcqmr.icc --><td class="faster"><span class="arrow">🠟</span><span class="value">101.38</span><span class="ci">±0.06</span></td>
+<!-- tcqmr.jacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">218.59</span><span class="ci">±0.15</span></td>
+<!-- tcqmr.sor --><td class="faster"><span class="arrow">🠟</span><span class="value">121.46</span><span class="ci">±0.21</span></td>
+<!-- tcqmr.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">144.90</span><span class="ci">±0.13</span></td>
+</tr>
+<tr><td><p>cgs</p></td>
+<!-- cgs.icc --><td class="faster"><span class="arrow">🠟</span><span class="value">46.61</span><span class="ci">±0.05</span></td>
+<!-- cgs.jacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">69.07</span><span class="ci">±0.09</span></td>
+<!-- cgs.sor --><td class="faster"><span class="arrow">🠟</span><span class="value">51.59</span><span class="ci">±0.06</span></td>
+<!-- cgs.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">61.97</span><span class="ci">±0.10</span></td>
+</tr>
+<tr><td><p>bcgs</p></td>
+<!-- bcgs.icc --><td class="faster"><span class="arrow">🠟</span><span class="value">42.14</span><span class="ci">±0.04</span></td>
+<!-- bcgs.jacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">58.58</span><span class="ci">±0.07</span></td>
+<!-- bcgs.sor --><td class="faster"><span class="arrow">🠟</span><span class="value">51.96</span><span class="ci">±0.09</span></td>
+<!-- bcgs.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">61.92</span><span class="ci">±0.07</span></td>
+</tr>
+<tr><td><p>tfqmr</p></td>
+<!-- tfqmr.icc --><td class="faster"><span class="arrow">🠟</span><span class="value">45.81</span><span class="ci">±0.05</span></td>
+<!-- tfqmr.jacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">66.88</span><span class="ci">±0.08</span></td>
+<!-- tfqmr.sor --><td class="faster"><span class="arrow">🠟</span><span class="value">49.87</span><span class="ci">±0.12</span></td>
+<!-- tfqmr.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">60.62</span><span class="ci">±0.10</span></td>
+</tr>
+<tr><td><p>cr</p></td>
+<!-- cr.icc --><td class="faster"><span class="arrow">🠟</span><span class="value">30.15</span><span class="ci">±0.02</span></td>
+<!-- cr.jacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">39.33</span><span class="ci">±0.06</span></td>
+<!-- cr.sor --><td class="faster"><span class="arrow">🠟</span><span class="value">36.79</span><span class="ci">±0.04</span></td>
+<!-- cr.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">43.54</span><span class="ci">±0.09</span></td>
+</tr>
+<tr><td><p>gcr</p></td>
+<!-- gcr.icc --><td class="slower"><span class="arrow">🠝</span><span class="value">572.14</span><span class="ci">±0.67</span></td>
+<!-- gcr.jacobi --><td class="slower"><span class="arrow">🠝</span><span class="value">714.81</span><span class="ci">±0.70</span></td>
+<!-- gcr.sor --><td class="slower"><span class="arrow">🠝</span><span class="value">835.58</span><span class="ci">±1.93</span></td>
+<!-- gcr.mg --><td class="slower"><span class="arrow">🠝</span><span class="value">419.61</span><span class="ci">±0.33</span></td>
+</tr>
+</table>
+
+</body>
+</html>

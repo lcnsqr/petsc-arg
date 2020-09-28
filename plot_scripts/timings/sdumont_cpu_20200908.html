@@ -9,9 +9,14 @@
 <body>
 
 <h1>CPU @ SDumont: timings in seconds</h1>
-<p>Best solver/pc: <span class="best_parms">cr/bjacobi</span> (<span class="max">2.05</span>)</p>
-<p>Worst solver/pc: <span class="worst_parms">gmres/sor</span> (<span class="min">47.10</span>)</p>
-<table>
+
+<table id="labels">
+<tr><td>Baseline</td><td></td></tr>
+<tr><td>Best</td><td></td></tr>
+<tr><td>Worst</td><td></td></tr>
+</table>
+
+<table id="values">
 <tr>
 <td><p>solver/pc</p></td>
 <td><p>bjacobi</p></td>
@@ -28,7 +33,7 @@
 <tr><td><p>gmres</p></td>
 <!-- gmres.bjacobi --><td class="same-time"><span class="arrow">⏸</span><span class="value">27.11</span><span class="ci">±0.26</span></td>
 <!-- gmres.jacobi --><td class="slower"><span class="arrow">🠝</span><span class="value">32.04</span><span class="ci">±0.29</span></td>
-<!-- gmres.sor --><td class="slower"><span class="arrow">🠝</span><span class="value">47.10</span><span class="ci">±0.39</span></td>
+<!-- gmres.sor --><td class="slower worst"><span class="arrow">🠝</span><span class="value">47.10</span><span class="ci">±0.39</span></td>
 <!-- gmres.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">25.50</span><span class="ci">±0.48</span></td>
 </tr>
 <tr><td><p>fcg</p></td>
@@ -62,7 +67,7 @@
 <!-- tfqmr.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">4.29</span><span class="ci">±0.04</span></td>
 </tr>
 <tr><td><p>cr</p></td>
-<!-- cr.bjacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">2.05</span><span class="ci">±0.02</span></td>
+<!-- cr.bjacobi --><td class="faster best"><span class="arrow">🠟</span><span class="value">2.05</span><span class="ci">±0.02</span></td>
 <!-- cr.jacobi --><td class="faster"><span class="arrow">🠟</span><span class="value">3.26</span><span class="ci">±0.02</span></td>
 <!-- cr.sor --><td class="faster"><span class="arrow">🠟</span><span class="value">2.65</span><span class="ci">±0.02</span></td>
 <!-- cr.mg --><td class="faster"><span class="arrow">🠟</span><span class="value">3.06</span><span class="ci">±0.02</span></td>

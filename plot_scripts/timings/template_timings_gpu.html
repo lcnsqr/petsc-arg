@@ -9,9 +9,14 @@
 <body>
 
 <h1>GPU @ #machine#: timings in seconds</h1>
-<p>Best solver/pc: <span class="best_parms">#bestparms#</span> (<span class="max">#min#</span>)</p>
-<p>Worst solver/pc: <span class="worst_parms">#worstparms#</span> (<span class="min">#max#</span>)</p>
-<table>
+
+<table id="labels">
+<tr><td>Baseline</td><td></td></tr>
+<tr><td>Best</td><td></td></tr>
+<tr><td>Worst</td><td></td></tr>
+</table>
+
+<table id="values">
 <tr>
 <td><p>solver/pc</p></td>
 <td><p>icc</p></td>

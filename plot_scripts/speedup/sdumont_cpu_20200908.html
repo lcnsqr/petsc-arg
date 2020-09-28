@@ -2,16 +2,21 @@
 <html lang="pt">
 <head>
   <meta charset="utf-8">
-  <title>CPU @ SDumount: speed-up</title>
+  <title>CPU @ SDumont: Speedup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="speedup.css">
 </head>
 <body>
 
-<h1>CPU @ SDumount: speed-up</h1>
-<p>Best solver/pc: <span class="best_parms">cr/bjacobi</span> (<span class="max">13.22</span>)</p>
-<p>Worst solver/pc: <span class="worst_parms">gmres/sor</span> (<span class="min">0.58</span>)</p>
-<table>
+<h1>CPU @ SDumont: Speedup</h1>
+
+<table id="labels">
+<tr><td>Baseline</td><td></td></tr>
+<tr><td>Best</td><td></td></tr>
+<tr><td>Worst</td><td></td></tr>
+</table>
+
+<table id="values">
 <tr>
 <td><p>solver/pc</p></td>
 <td><p>bjacobi</p></td>
@@ -28,7 +33,7 @@
 <tr><td><p>gmres</p></td>
 <!-- gmres.bjacobi --><td class="same"><span class="arrow">⏸</span><span class="value">1.00</span></td>
 <!-- gmres.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.85</span></td>
-<!-- gmres.sor --><td class="down"><span class="arrow">🠟</span><span class="value">0.58</span></td>
+<!-- gmres.sor --><td class="down worst"><span class="arrow">🠟</span><span class="value">0.58</span></td>
 <!-- gmres.mg --><td class="up"><span class="arrow">🠝</span><span class="value">1.06</span></td>
 </tr>
 <tr><td><p>fcg</p></td>
@@ -62,7 +67,7 @@
 <!-- tfqmr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">6.32</span></td>
 </tr>
 <tr><td><p>cr</p></td>
-<!-- cr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">13.22</span></td>
+<!-- cr.bjacobi --><td class="up best"><span class="arrow">🠝</span><span class="value">13.22</span></td>
 <!-- cr.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">8.32</span></td>
 <!-- cr.sor --><td class="up"><span class="arrow">🠝</span><span class="value">10.23</span></td>
 <!-- cr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">8.86</span></td>

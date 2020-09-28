@@ -7,40 +7,67 @@ body {
   text-align: center;
 }
 
-table {
+table#labels {
+  width: 520px;
+  margin-left: auto; 
+  margin-right: auto;
+  text-align: right;
+}
+
+table#labels tr {
+  display: grid;
+  grid-template-columns: auto 20px;
+  column-gap: 4px;
+  font-size: smaller;
+  line-height: 1em;
+  margin-bottom: 2px;
+}
+
+table#labels tr:nth-child(1) td:nth-child(2) {
+  background-color: black;
+}
+table#labels tr:nth-child(2) td:nth-child(2) {
+  background-color: green;
+}
+table#labels tr:nth-child(3) td:nth-child(2) {
+  background-color: red;
+}
+
+table#values {
+  width: 520px;
   font-weight: 700;
   margin-left: auto; 
   margin-right: auto;
 }
 
-table tr {
+table#values tr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   border-bottom: 1px solid #ccc;
 }
 
-table tr:first-child {
+table#values tr:first-child {
   border-top: 1px solid #ccc;
 }
 
-table tr td {
+table#values tr td {
   padding: 6px 10px;
 }
 
-table tr td:nth-child(2n) {
+table#values tr td:nth-child(2n) {
   background-color: #eeeeec;
 }
 
-table tr td.same ,
-table tr td.up ,
-table tr td.down {
+table#values tr td.same ,
+table#values tr td.up ,
+table#values tr td.down {
   display: grid;
   grid-template-columns: 1.5em auto;
 }
 
-table tr td.same-time ,
-table tr td.slower ,
-table tr td.faster {
+table#values tr td.same-time ,
+table#values tr td.slower ,
+table#values tr td.faster {
   display: grid;
   grid-template-columns: 1.5em auto;
   grid-template-rows: auto;
@@ -49,51 +76,62 @@ table tr td.faster {
     "ci ci";
 }
 
-table tr td.same-time span.arrow ,
-table tr td.faster span.arrow ,
-table tr td.slower span.arrow {
+table#values tr td.same-time span.arrow ,
+table#values tr td.faster span.arrow ,
+table#values tr td.slower span.arrow {
   grid-area: arrow;
 }
 
-table tr td.same-time span.value ,
-table tr td.faster span.value ,
-table tr td.slower span.value {
+table#values tr td.same-time span.value ,
+table#values tr td.faster span.value ,
+table#values tr td.slower span.value {
   grid-area: time;
 }
 
-table tr td.same-time span.ci ,
-table tr td.faster span.ci ,
-table tr td.slower span.ci {
+table#values tr td.same-time span.ci ,
+table#values tr td.faster span.ci ,
+table#values tr td.slower span.ci {
   grid-area: ci;
   font-size: small;
   font-weight: normal;
 }
 
-td.same, td.same-time {
-  color: #777;
+table#values td.same, table#values td.same-time {
+  color: #fff;
+  background-color: #000 !important
 }
 
-td.up, td.faster {
+table#values td.up.best, table#values td.faster.best {
+  color: #fff;
+  background-color: green !important
+}
+
+table#values td.down.worst, table#values td.slower.worst {
+  color: #fff;
+  background-color: red !important
+}
+
+table#values td.up, table#values td.faster {
   color: green;
 }
 
-td.down, td.slower {
+table#values td.down, table#values td.slower {
   color: red;
 }
 
-table tr td span.arrow {
+table#values tr td span.arrow {
   font-size: 1.4em;
 }
 
-table tr td span.value {
+table#values tr td span.value {
   line-height: 1.6em;
 }
 
-table tr td p {
+table#values tr td p {
   width: 100%;
 }
 
-table tr td:first-child {
+table#values tr td:first-child {
   background-color: #fff;
   border-width: 0;
   color: #2d2d2d;
@@ -101,50 +139,26 @@ table tr td:first-child {
   align-items: center;
 }
 
-table tr td:first-child p {
+table#values tr td:first-child p {
   width: 100%;
   text-align: right;
   margin: 0;
   line-height: 1.4em;
 }
 
-table tr:first-child td {
+table#values tr:first-child td {
   border-width: 0;
   color: #2d2d2d;
 }
 
-table tr:first-child td:first-child {
+table#values tr:first-child td:first-child {
   color: #666;
 }
 
-table tr:first-child td:not(:first-child) p {
+table#values tr:first-child td:not(:first-child) p {
   width: 100%;
   text-align: center;
   margin: 0;
   line-height: 1.4em;
-}
-
-span.max, span.min { 
-  color: #fff;
-  padding: 4px;
-  font-weight: 600;
-}
-
-span.max {
-  color: green;
-}
-
-span.min {
-  color: red;
-}
-
-span.best_parms {
-  color: green;
-  font-weight: 700
-}
-
-span.worst_parms {
-  color: red;
-  font-weight: 700
 }
 

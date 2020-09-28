@@ -45,8 +45,6 @@ OUTFILE=`basename ${CSV%.csv*}.html`
 
 cp template_timings_$TARGET.html $OUTFILE
 
-sed -i -e "s/#min#/$MIN/" -e "s/#max#/$MAX/" $OUTFILE
-
 sed -i -e "s/#machine#/$MACHINE/" $OUTFILE
 
 for (( l = 1; l < ${#AVERAGES[*]}; l++ ))
@@ -74,12 +72,12 @@ do
 
   if [ $TIME == $MAX ]
   then
-    sed -i -e "s/#worstparms#/$KSP_TYPE\/$PC_TYPE/" $OUTFILE
+    sed -i -e "/^<!-- $KSP_TYPE.$PC_TYPE -->/s/#direction#/$DIRECTION worst/" $OUTFILE
   fi
 
   if [ $TIME == $MIN ]
   then
-    sed -i -e "s/#bestparms#/$KSP_TYPE\/$PC_TYPE/" $OUTFILE
+    sed -i -e "/^<!-- $KSP_TYPE.$PC_TYPE -->/s/#direction#/$DIRECTION best/" $OUTFILE
   fi
 
   sed -i -e "/^<!-- $KSP_TYPE.$PC_TYPE -->/s/#direction#/$DIRECTION/" \

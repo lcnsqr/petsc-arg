@@ -2,16 +2,21 @@
 <html lang="pt">
 <head>
   <meta charset="utf-8">
-  <title>CPU @ #machine#: speed-up</title>
+  <title>CPU @ #machine#: Speedup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="speedup.css">
 </head>
 <body>
 
-<h1>CPU @ #machine#: speed-up</h1>
-<p>Best solver/pc: <span class="best_parms">#bestparms#</span> (<span class="max">#max#</span>)</p>
-<p>Worst solver/pc: <span class="worst_parms">#worstparms#</span> (<span class="min">#min#</span>)</p>
-<table>
+<h1>CPU @ #machine#: Speedup</h1>
+
+<table id="labels">
+<tr><td>Baseline</td><td></td></tr>
+<tr><td>Best</td><td></td></tr>
+<tr><td>Worst</td><td></td></tr>
+</table>
+
+<table id="values">
 <tr>
 <td><p>solver/pc</p></td>
 <td><p>bjacobi</p></td>

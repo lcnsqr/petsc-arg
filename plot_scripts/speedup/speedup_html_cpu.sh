@@ -33,8 +33,6 @@ MAX=`tail -n +2 "$CSV" | cut -d, -f3| sort -r -g| head -1`
 
 cp template_speedup_$TARGET.html ${CSV%.csv*}.html
 
-sed -i -e "s/#min#/$MIN/" -e "s/#max#/$MAX/" ${CSV%.csv*}.html
-
 sed -i -e "s/#machine#/$MACHINE/" ${CSV%.csv*}.html
 
 for (( l = 1; l < ${#AVERAGES[*]}; l++ ))
@@ -58,12 +56,12 @@ do
 
   if [ $SPEEDUP == $MIN ]
   then
-    sed -i -e "s/#worstparms#/$KSP_TYPE\/$PC_TYPE/" ${CSV%.csv*}.html
+    sed -i -e "/^<!-- $KSP_TYPE.$PC_TYPE -->/s/#direction#/$DIRECTION worst/" ${CSV%.csv*}.html
   fi
 
   if [ $SPEEDUP == $MAX ]
   then
-    sed -i -e "s/#bestparms#/$KSP_TYPE\/$PC_TYPE/" ${CSV%.csv*}.html
+    sed -i -e "/^<!-- $KSP_TYPE.$PC_TYPE -->/s/#direction#/$DIRECTION best/" ${CSV%.csv*}.html
   fi
 
   sed -i -e "/^<!-- $KSP_TYPE.$PC_TYPE -->/s/#direction#/$DIRECTION/" \

@@ -8,7 +8,7 @@ body {
 }
 
 table#labels {
-  width: 520px;
+  width: 580px;
   margin-left: auto; 
   margin-right: auto;
   text-align: right;
@@ -34,7 +34,7 @@ table#labels tr:nth-child(3) td:nth-child(2) {
 }
 
 table#values {
-  width: 520px;
+  width: 580px;
   font-weight: 700;
   margin-left: auto; 
   margin-right: auto;
@@ -72,14 +72,16 @@ table#values tr td.faster {
   grid-template-columns: 1.5em auto;
   grid-template-rows: auto;
   grid-template-areas: 
-    "arrow time"
+    "time time"
     "ci ci";
 }
 
 table#values tr td.same-time span.arrow ,
 table#values tr td.faster span.arrow ,
 table#values tr td.slower span.arrow {
-  grid-area: arrow;
+  /* grid-area: arrow; */
+  display: none;
+  
 }
 
 table#values tr td.same-time span.value ,
@@ -161,4 +163,5 @@ table#values tr:first-child td:not(:first-child) p {
   margin: 0;
   line-height: 1.4em;
 }
+
 

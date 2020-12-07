@@ -72,14 +72,16 @@ table#values tr td.faster {
   grid-template-columns: 1.5em auto;
   grid-template-rows: auto;
   grid-template-areas: 
-    "arrow time"
+    "time time"
     "ci ci";
 }
 
 table#values tr td.same-time span.arrow ,
 table#values tr td.faster span.arrow ,
 table#values tr td.slower span.arrow {
-  grid-area: arrow;
+  /* grid-area: arrow; */
+  display: none;
+  
 }
 
 table#values tr td.same-time span.value ,

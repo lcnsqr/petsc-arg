@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>CPU @ SDU II: Speedup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="speedup.css">
+</head>
+<body>
+
+<h1>CPU @ SDU II</h1>
+
+<table id="labels">
+<tr><td>Baseline</td><td></td></tr>
+<tr><td>Best</td><td></td></tr>
+<tr><td>Worst</td><td></td></tr>
+</table>
+
+<table id="values">
+<tr>
+<td><p>solver/pc</p></td>
+<td><p>bjacobi</p></td>
+<td><p>jacobi</p></td>
+<td><p>sor</p></td>
+<td><p>mg</p></td>
+</tr>
+<tr><td><p>cg</p></td>
+<!-- cg.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">1.69</span></td>
+<!-- cg.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">4.03</span></td>
+<!-- cg.sor --><td class="up"><span class="arrow">🠝</span><span class="value">1.34</span></td>
+<!-- cg.mg --><td class="up"><span class="arrow">🠝</span><span class="value">1.23</span></td>
+</tr>
+<tr><td><p>gmres</p></td>
+<!-- gmres.bjacobi --><td class="same"><span class="arrow">⏸</span><span class="value">1.00</span></td>
+<!-- gmres.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.85</span></td>
+<!-- gmres.sor --><td class="down"><span class="arrow">🠟</span><span class="value">0.67</span></td>
+<!-- gmres.mg --><td class="down"><span class="arrow">🠟</span><span class="value">0.88</span></td>
+</tr>
+<tr><td><p>fcg</p></td>
+<!-- fcg.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">1.58</span></td>
+<!-- fcg.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">3.84</span></td>
+<!-- fcg.sor --><td class="up"><span class="arrow">🠝</span><span class="value">1.27</span></td>
+<!-- fcg.mg --><td class="up"><span class="arrow">🠝</span><span class="value">1.20</span></td>
+</tr>
+<tr><td><p>tcqmr</p></td>
+<!-- tcqmr.bjacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.46</span></td>
+<!-- tcqmr.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.26</span></td>
+<!-- tcqmr.sor --><td class="down worst"><span class="arrow">🠟</span><span class="value">0.22</span></td>
+<!-- tcqmr.mg --><td class="down"><span class="arrow">🠟</span><span class="value">0.46</span></td>
+</tr>
+<tr><td><p>cgs</p></td>
+<!-- cgs.bjacobi --><td class="up best"><span class="arrow">🠝</span><span class="value">4.19</span></td>
+<!-- cgs.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.48</span></td>
+<!-- cgs.sor --><td class="up"><span class="arrow">🠝</span><span class="value">2.93</span></td>
+<!-- cgs.mg --><td class="up"><span class="arrow">🠝</span><span class="value">1.06</span></td>
+</tr>
+<tr><td><p>bcgs</p></td>
+<!-- bcgs.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">1.46</span></td>
+<!-- bcgs.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">2.74</span></td>
+<!-- bcgs.sor --><td class="up"><span class="arrow">🠝</span><span class="value">1.12</span></td>
+<!-- bcgs.mg --><td class="down"><span class="arrow">🠟</span><span class="value">0.99</span></td>
+</tr>
+<tr><td><p>tfqmr</p></td>
+<!-- tfqmr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">1.43</span></td>
+<!-- tfqmr.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.23</span></td>
+<!-- tfqmr.sor --><td class="up"><span class="arrow">🠝</span><span class="value">1.09</span></td>
+<!-- tfqmr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">1.09</span></td>
+</tr>
+<tr><td><p>cr</p></td>
+<!-- cr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">1.70</span></td>
+<!-- cr.jacobi --><td class="up"><span class="arrow">🠝</span><span class="value">4.00</span></td>
+<!-- cr.sor --><td class="up"><span class="arrow">🠝</span><span class="value">1.38</span></td>
+<!-- cr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">1.24</span></td>
+</tr>
+<tr><td><p>gcr</p></td>
+<!-- gcr.bjacobi --><td class="up"><span class="arrow">🠝</span><span class="value">1.26</span></td>
+<!-- gcr.jacobi --><td class="down"><span class="arrow">🠟</span><span class="value">0.95</span></td>
+<!-- gcr.sor --><td class="down"><span class="arrow">🠟</span><span class="value">0.88</span></td>
+<!-- gcr.mg --><td class="up"><span class="arrow">🠝</span><span class="value">1.16</span></td>
+</tr>
+</table>
+
+</body>
+</html>

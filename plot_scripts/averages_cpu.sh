@@ -23,9 +23,6 @@ fi
 
 # Field to compute
 # 3: Main stage execution time
-# 4: Load average in the last minute
-# 5: Load average in the last five minutes
-# 6: Load average in the last fifteen minutes
 
 echo "ksp_type,pc_type,mean,sd,ci"
 

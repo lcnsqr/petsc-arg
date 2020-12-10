@@ -48,10 +48,16 @@
 #include "libmesh/getpot.h"
 #include "libmesh/enum_solver_package.h"
 
+// Global time measurement
+#include <time.h>
+struct Stopwatch {
+  struct timespec start;
+  struct timespec end;
+  double elapsed;
+};
+
 // Bring in everything from the libMesh namespace
 using namespace libMesh;
-
-
 
 // Function prototype.  This is the function that will assemble
 // the linear system for our Poisson problem.  Note that the
@@ -80,6 +86,11 @@ void exact_solution_wrapper (DenseVector<Number> & output,
 // Begin the main program.
 int main (int argc, char ** argv)
 {
+
+  // Time count
+  struct Stopwatch sw;
+  clock_gettime(CLOCK_MONOTONIC, &sw.start);
+
   // Initialize libMesh and any dependent libraries, like in example 2.
   LibMeshInit init (argc, argv);
 
@@ -258,6 +269,13 @@ int main (int argc, char ** argv)
 
   // Solve the system "Poisson", just like example 2.
   system.solve();
+
+	clock_gettime(CLOCK_MONOTONIC, &sw.end);
+	sw.elapsed = 
+	(double) (sw.end.tv_sec - sw.start.tv_sec) +
+	(double) (sw.end.tv_nsec - sw.start.tv_nsec) / 1e9;
+	printf("Tempo total: %f\n", sw.elapsed);
+
 
   // After solving the system write the solution
   // to a GMV-formatted plot file.

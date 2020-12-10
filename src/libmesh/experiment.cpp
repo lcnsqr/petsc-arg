@@ -279,6 +279,7 @@ int main (int argc, char ** argv)
 
   // After solving the system write the solution
   // to a GMV-formatted plot file.
+  /*
   if (dim == 1)
     {
       GnuPlotIO plot(mesh, "Introduction Example 4, 1D", GnuPlotIO::GRID_ON);
@@ -291,6 +292,7 @@ int main (int argc, char ** argv)
                                                  "out_3.e" : "out_2.e", equation_systems);
     }
 #endif // #ifdef LIBMESH_HAVE_EXODUS_API
+  */
 
   // All done.
   return 0;
